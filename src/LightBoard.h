@@ -14,8 +14,7 @@
 
 class LightBoard {
     
-    LedPixel ** pixelArray;
-    LedPixel * pixelArrayData;
+    LedPixel * pixelArray;
     
 public:
     
@@ -26,6 +25,7 @@ public:
     ~LightBoard();
     
     LedPixel* getLedPixel(int r, int c);
+    void setPixelColor(int r, int c, unsigned int color);
 };
 
 #endif /* defined(__djBooth__LightBoard__) */

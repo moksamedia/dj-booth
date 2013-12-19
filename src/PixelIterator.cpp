@@ -29,18 +29,23 @@ LedPixel * PixelIterator::next() {
     // Get the next LedPixel
     LedPixel * next = lightBoard->getLedPixel(currentRow, currentColumn);
     
+    // Do this so that we can increment the counters here, but
+    // still grab the current row and column
+    currentColumn = nextColumn;
+    currentRow = nextRow;
+    
     // Increment the current row
-    currentRow += 1;
+    nextRow += 1;
     
     // If the row has looped, go back to zero and increment columns
-    if (currentRow >= lightBoard->numberOfRows) {
-        currentRow = 0;
-        currentColumn += 1;
+    if (nextRow >= lightBoard->numberOfRows) {
+        nextRow = 0;
+        nextColumn += 1;
     }
     
     return next;
 }
 
 bool PixelIterator::hasNext() {
-    return (currentColumn < lightBoard->numberOfColumns);
+    return (nextColumn < lightBoard->numberOfColumns);
 }

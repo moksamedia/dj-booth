@@ -2,7 +2,11 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
-
+    
+    lightBoard = new OpenFrameworksLightBoard(9, 67, WINDOW_WIDTH, WINDOW_HEIGHT);
+    
+    ofEnableSmoothing();
+    ofBackground(255);
 }
 
 //--------------------------------------------------------------
@@ -12,7 +16,7 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
+    lightBoard->draw();
 }
 
 //--------------------------------------------------------------
@@ -37,7 +41,7 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-
+    lightBoard->checkHit(x-OUTER_MARGIN, y-OUTER_MARGIN);
 }
 
 //--------------------------------------------------------------

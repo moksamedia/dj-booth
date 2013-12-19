@@ -13,14 +13,15 @@
 
 class LedPixel {
     
-    unsigned int color = 0xFFFFFF;
+    unsigned int color = 0xFF0000;
 
 public:
     
     // color
     void setColorRGB(unsigned int newColor);
     unsigned int getColorRGB();
-        
+    
+    LedPixel();
     
 };
 

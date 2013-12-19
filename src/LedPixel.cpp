@@ -8,6 +8,9 @@
 
 #include "LedPixel.h"
 
+LedPixel::LedPixel() {
+    color = 0x000000;
+}
 
 // color
 void LedPixel::setColorRGB(unsigned int newColor) {

@@ -10,12 +10,7 @@
 
 LightBoard::LightBoard(int rows, int cols) {
 
-    pixelArrayData = new LedPixel[rows*cols];
-    pixelArray = new LedPixel*[rows];
-    
-    for (int i; i < rows; i++) {
-        pixelArray[i] = pixelArrayData + cols*i;
-    }
+    pixelArray = new LedPixel[rows*cols];
     
     numberOfColumns = cols;
     numberOfRows = rows;
@@ -29,12 +24,16 @@ LedPixel* LightBoard::getLedPixel(int r, int c) {
         return NULL;
     }
     
-    return &pixelArray[r][c];
+    return &pixelArray[r * numberOfColumns + c];
     
+}
+
+void LightBoard::setPixelColor(int r, int c, unsigned int color) {
+    LedPixel * pix = getLedPixel(r, c);
+    pix->setColorRGB(color);
 }
 
 LightBoard::~LightBoard() {
     delete[] pixelArray;
-    delete[] pixelArrayData;
 }
 

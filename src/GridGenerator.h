@@ -10,8 +10,15 @@
 #define __djBooth__GridGenerator__
 
 #include <iostream>
-#include "Rect.h"
-#include "Point.h"
+#include "DJRect.h"
+#include "DJPoint.h"
+
+struct _GridHit {
+    int row;
+    int column;
+    bool isHit;
+};
+typedef struct _GridHit GridHit;
 
 class GridGenerator {
      
@@ -29,7 +36,7 @@ class GridGenerator {
     
     float margin;
     
-    Point offset;
+    DJPoint offset;
 
 public:
 
@@ -38,17 +45,16 @@ public:
                   float _margin,
                   float _totalWidth,
                   float _totalHeight,
-                  Point _offset);
+                  float _offsetX = 0.0,
+                  float _offsetY = 0.0);
     
-    GridGenerator(int _rows,
-                  int _columns,
-                  float _margin,
-                  float _totalWidth,
-                  float _totalHeight);
+    DJPoint getPoint(int r, int c);
     
-    Point getPoint(int r, int c);
+    DJRect getRect(int r, int c);
     
-    Rect getRect(int r, int c);
+    GridHit getHit(float x, float y);
+    int rowForY(float y);
+    int columnForX(float x);
 };
 
 #endif /* defined(__djBooth__GridGenerator__) */

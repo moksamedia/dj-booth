@@ -16,11 +16,14 @@ class PixelIterator {
     
     LightBoard * lightBoard;
     
+    int nextRow = 0;
+    int nextColumn = 0;
+
+public:
+
     int currentRow = 0;
     int currentColumn = 0;
-    
-public:
-    
+
     PixelIterator(LightBoard * lightBoard);
     LedPixel * next();
     bool hasNext();

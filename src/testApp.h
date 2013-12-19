@@ -1,9 +1,16 @@
 #pragma once
 
+#define OUTER_MARGIN 10
+#define WINDOW_WIDTH 1024
+#define WINDOW_HEIGHT 161
+
 #include "ofMain.h"
+#include "OpenFrameworksLightBoard.h"
 
 class testApp : public ofBaseApp {
 
+    OpenFrameworksLightBoard * lightBoard;
+    
 	public:
 		void setup();
 		void update();

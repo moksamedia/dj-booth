@@ -31,9 +31,10 @@ class OpenFrameworksLightBoard : public LightBoard {
 public:
     void draw();
     void sendSerial();
+    void checkHit(float x, float y);
     
     OpenFrameworksLightBoard(int r, int c, float w, float h);
-    
+    ~OpenFrameworksLightBoard();
     
 };
 

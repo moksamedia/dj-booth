@@ -13,8 +13,8 @@
 		47C46F9918578EBA0009EFDE /* LedPixel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47C46F9718578EBA0009EFDE /* LedPixel.cpp */; };
 		47C46F9C1858C6000009EFDE /* OpenFrameworksLightBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47C46F9A1858C6000009EFDE /* OpenFrameworksLightBoard.cpp */; };
 		47C46F9F1858CAD00009EFDE /* GridGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47C46F9D1858CAD00009EFDE /* GridGenerator.cpp */; };
-		47C46FA21858CC1E0009EFDE /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47C46FA01858CC1E0009EFDE /* Point.cpp */; };
-		47C46FA51858CF880009EFDE /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47C46FA31858CF880009EFDE /* Rect.cpp */; };
+		47C46FA21858CC1E0009EFDE /* DJPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47C46FA01858CC1E0009EFDE /* DJPoint.cpp */; };
+		47C46FA51858CF880009EFDE /* DJRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 47C46FA31858CF880009EFDE /* DJRect.cpp */; };
 		483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78D67A00EB899FAC09430597 /* ofxLabel.cpp */; };
 		5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C88333E71C9457E441C33474 /* ofxButton.cpp */; };
 		837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15F2C6477A769C03A56D1401 /* ofxSlider.cpp */; };
@@ -90,10 +90,10 @@
 		47C46F9B1858C6000009EFDE /* OpenFrameworksLightBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenFrameworksLightBoard.h; sourceTree = "<group>"; };
 		47C46F9D1858CAD00009EFDE /* GridGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GridGenerator.cpp; sourceTree = "<group>"; };
 		47C46F9E1858CAD00009EFDE /* GridGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridGenerator.h; sourceTree = "<group>"; };
-		47C46FA01858CC1E0009EFDE /* Point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
-		47C46FA11858CC1E0009EFDE /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
-		47C46FA31858CF880009EFDE /* Rect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
-		47C46FA41858CF880009EFDE /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		47C46FA01858CC1E0009EFDE /* DJPoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DJPoint.cpp; sourceTree = "<group>"; };
+		47C46FA11858CC1E0009EFDE /* DJPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJPoint.h; sourceTree = "<group>"; };
+		47C46FA31858CF880009EFDE /* DJRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DJRect.cpp; sourceTree = "<group>"; };
+		47C46FA41858CF880009EFDE /* DJRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJRect.h; sourceTree = "<group>"; };
 		52AFA1F08C420992CAAAE648 /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSlider.h; path = ../../../addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
 		78D67A00EB899FAC09430597 /* ofxLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxLabel.cpp; path = ../../../addons/ofxGui/src/ofxLabel.cpp; sourceTree = SOURCE_ROOT; };
 		802251BAF1B35B1D67B32FD0 /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSliderGroup.cpp; path = ../../../addons/ofxGui/src/ofxSliderGroup.cpp; sourceTree = SOURCE_ROOT; };
@@ -264,22 +264,22 @@
 			isa = PBXGroup;
 			children = (
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
-				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
+				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				47C46F9518578E7F0009EFDE /* LightBoard.h */,
 				47C46F9418578E7F0009EFDE /* LightBoard.cpp */,
-				477CFE81185F5A8E00289645 /* PixelIterator.cpp */,
 				477CFE82185F5A8E00289645 /* PixelIterator.h */,
+				477CFE81185F5A8E00289645 /* PixelIterator.cpp */,
 				47C46F9B1858C6000009EFDE /* OpenFrameworksLightBoard.h */,
 				47C46F9A1858C6000009EFDE /* OpenFrameworksLightBoard.cpp */,
 				47C46F9E1858CAD00009EFDE /* GridGenerator.h */,
 				47C46F9D1858CAD00009EFDE /* GridGenerator.cpp */,
 				47C46F9818578EBA0009EFDE /* LedPixel.h */,
 				47C46F9718578EBA0009EFDE /* LedPixel.cpp */,
-				47C46FA11858CC1E0009EFDE /* Point.h */,
-				47C46FA01858CC1E0009EFDE /* Point.cpp */,
-				47C46FA41858CF880009EFDE /* Rect.h */,
-				47C46FA31858CF880009EFDE /* Rect.cpp */,
+				47C46FA11858CC1E0009EFDE /* DJPoint.h */,
+				47C46FA01858CC1E0009EFDE /* DJPoint.cpp */,
+				47C46FA41858CF880009EFDE /* DJRect.h */,
+				47C46FA31858CF880009EFDE /* DJRect.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -387,14 +387,14 @@
 				47C46F9C1858C6000009EFDE /* OpenFrameworksLightBoard.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
 				47C46F9918578EBA0009EFDE /* LedPixel.cpp in Sources */,
-				47C46FA51858CF880009EFDE /* Rect.cpp in Sources */,
+				47C46FA51858CF880009EFDE /* DJRect.cpp in Sources */,
 				47C46F9618578E7F0009EFDE /* LightBoard.cpp in Sources */,
 				477CFE83185F5A8E00289645 /* PixelIterator.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
 				483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */,
 				F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */,
 				837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */,
-				47C46FA21858CC1E0009EFDE /* Point.cpp in Sources */,
+				47C46FA21858CC1E0009EFDE /* DJPoint.cpp in Sources */,
 				B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */,
 				1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */,
 			);
